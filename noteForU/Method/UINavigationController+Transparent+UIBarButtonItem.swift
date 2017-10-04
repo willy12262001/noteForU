@@ -19,7 +19,7 @@ extension UINavigationController {
         self.navigationBar.isTranslucent = true
         self.navigationBar.tintColor = UIColor.blue
 //        self.navigationBar.setBackgroundImage(UIImage(named: "01.jpg"), for: UIBarMetrics.default)
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Zapfino", size: 24)!, NSAttributedStringKey.foregroundColor: UIColor.blue]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Avenir", size: 24)!, NSAttributedStringKey.foregroundColor: UIColor.blue]
         
     }
 }

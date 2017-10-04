@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let infoManager = InfoManager(momdFilename: "DataModel", entityName: "Info", sortKey: "date")
         InfoManager.setAsSingleton(instance: infoManager)
         infoDataManager = InfoManager.shared
+        
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }

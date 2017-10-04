@@ -94,10 +94,10 @@ extension PaperViewController {
         mutableStr.insert(attStr, at: selectedRange.location)
         
         mutableStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 20), range: NSMakeRange(0,mutableStr.length))
-        let newSelectedRange = NSMakeRange(selectedRange.location + 2, 0)
-        textView.attributedText = mutableStr
+        let newSelectedRange = NSMakeRange(selectedRange.location + 1, 0)
         textView.selectedRange = newSelectedRange
-        textView.scrollRangeToVisible(newSelectedRange)
+        textView.attributedText = mutableStr
     }
     
 }
+

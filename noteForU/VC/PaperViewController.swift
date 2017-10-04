@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate ,UITextViewDelegate{
+class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     //身體顏色
     @IBOutlet weak var paperView: UIView!
     
@@ -29,17 +29,14 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         paperView.layer.cornerRadius = 10
         //隱藏色碼
         containerOfcolorView.isHidden = true
-        //鍵盤加上Bariten
+        //鍵盤上加toolbar
         addDoneButtonOnKeyboard(target: textView)
-        //
-        self.textView.delegate = self
-        //添加觀察者
-        self.view.addKeyboardNotification()
+        //剛打開的背景顏色
+        paperView.backgroundColor = color
+        colorR = 0.98
+        colorG = 1
+        colorB = 0.58
         
-    }
-    
-    deinit{
-        self.view.removeKeyboardNotification()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,6 +45,10 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     }
     
     @IBAction func backToPage(_ sender: Any) {
+        //創物件並存擋
+        content = textView.text
+        infoDataManager?.extractedFunc()
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -66,25 +67,68 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         }
     }
     
-    
+    //MARK: - Choose color BTN
     @IBAction func yellowBTN(_ sender: Any) {
-    }
-    @IBAction func orangeBTN(_ sender: Any) {
-    }
-    @IBAction func pinkBTN(_ sender: Any) {
-    }
-    @IBAction func greenBTN(_ sender: Any) {
-    }
-    @IBAction func blueBTN(_ sender: Any) {
-    }
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        let select = textView.selectedRange
-        print(select.location)
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        let yellow = UIColor(red: 0.98, green: 1, blue: 0.58, alpha: 1)
+        paperView.backgroundColor = yellow
+        
+        colorR = 0.98
+        colorG = 1
+        colorB = 0.58
+        
+        color = yellow
         
     }
+    @IBAction func orangeBTN(_ sender: Any) {
+        
+        let orange = UIColor(red: 0.99, green: 0.62, blue: 0.25, alpha: 1)
+        paperView.backgroundColor = orange
+        
+        colorR = 0.99
+        colorG = 0.62
+        colorB = 0.25
+        
+        color = orange
+        
+    }
+    @IBAction func pinkBTN(_ sender: Any) {
+        
+        let pink = UIColor(red: 0.99, green: 0.61, blue: 0.98, alpha: 1)
+        paperView.backgroundColor = pink
+        
+        colorR = 0.99
+        colorG = 0.61
+        colorB = 0.98
+        
+        color = pink
+        
+    }
+    @IBAction func greenBTN(_ sender: Any) {
+        
+        let green = UIColor(red: 0.59, green: 0.92, blue: 0.58, alpha: 1)
+        paperView.backgroundColor = green
+        
+        colorR = 0.59
+        colorG = 0.92
+        colorB = 0.58
+        
+        color = green
+        
+    }
+    @IBAction func blueBTN(_ sender: Any) {
+        
+        let blue = UIColor(red: 0.64, green: 1, blue: 0.95, alpha: 1)
+        paperView.backgroundColor = blue
+        
+        colorR = 0.64
+        colorG = 1
+        colorB = 0.95
+        
+        color = blue
+        
+    }
+
     /*
     // MARK: - Navigation
 

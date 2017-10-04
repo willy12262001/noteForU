@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="134"/>
+            <point key="canvasLocation" x="-124" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Tc-ls-CAc">
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6T-jV-Vy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4572" y="-228.03598200899552"/>
+            <point key="canvasLocation" x="5641" y="-228"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="7vL-Vw-hAx">
@@ -660,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRm-3V-irT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4572" y="492"/>
+            <point key="canvasLocation" x="4622" y="-228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eTW-w2-WN9">
@@ -678,7 +678,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJW-uD-Hve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="134"/>
+            <point key="canvasLocation" x="-796" y="134"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="wMz-JH-4Yu">
@@ -864,6 +864,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIG-Ba-IbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="550" y="134"/>
         </scene>
     </scenes>
     <resources>
@@ -875,6 +876,6 @@
         <image name="settings.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dz9-4Q-g3Y"/>
+        <segue reference="vdW-3w-y5o"/>
     </inferredMetricsTieBreakers>
 </document>

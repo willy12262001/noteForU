@@ -21,6 +21,7 @@ var CDpassword:String? = nil
 var colorB:Float? = nil
 var colorR:Float? = nil
 var colorG:Float? = nil
+var color = UIColor(red: 0.98, green: 1, blue: 0.58, alpha: 1)
 var content:String? = nil
 var photo:Data? = nil
 
