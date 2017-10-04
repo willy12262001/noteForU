@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>notForU need to use camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>notForU need to use photo libary</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>notForU need to use photo libary</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        gesture = GestureRecognizer()
+        
+        let userManager = UsersManager(momdFilename: "DataModel", entityName: "Users", sortKey: "name")
+        UsersManager.setAsSingleton(instance: userManager)
+        usersDataManager = UsersManager.shared
+        
+        let infoManager = InfoManager(momdFilename: "DataModel", entityName: "Info", sortKey: "date")
+        InfoManager.setAsSingleton(instance: infoManager)
+        infoDataManager = InfoManager.shared
+        
         return true
     }
 
