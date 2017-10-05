@@ -25,7 +25,7 @@ class InfoManager:CoreDataManager<Info> {
     
     //MARK: - EditUsers & Create
     func extractedFunc() {
-        editUser(originalItem: nil) { (success, item) in
+        editInfo(originalItem: nil) { (success, item) in
             
             guard success == true else {
                 return
@@ -44,7 +44,7 @@ class InfoManager:CoreDataManager<Info> {
     }
     typealias EditDoneHandler = (_ success:Bool,_ resultItem:Info?) -> Void
     
-    func editUser(originalItem:Info?,completion:@escaping EditDoneHandler) {
+    func editInfo(originalItem:Info?,completion:@escaping EditDoneHandler) {
         var finalItem = originalItem
         if finalItem == nil {
             finalItem = infoDataManager?.createItem()
@@ -55,7 +55,10 @@ class InfoManager:CoreDataManager<Info> {
         finalItem?.color = dataColor
         finalItem?.colorL = dataColorL
         
-  
+        if let attStr = attString {
+            let x = NSKeyedArchiver.archivedData(withRootObject: attStr)
+            finalItem?.attStr = x
+        }
         if let contentt = content {
             finalItem?.content = contentt
         }

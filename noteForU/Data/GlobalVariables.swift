@@ -28,6 +28,7 @@ var colorB = 0.58
 
 var color = UIColor(red: 0.98, green: 1, blue: 0.58, alpha: 1)
 var colorL = UIColor(red: 0.8, green: 0.75, blue: 0.53, alpha: 1)
+var attString:NSAttributedString? = nil
 var content:String? = nil
 var photo:Data? = nil
 var currentDate:String? = nil

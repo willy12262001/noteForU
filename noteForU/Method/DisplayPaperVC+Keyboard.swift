@@ -1,15 +1,14 @@
 //
-//  Keyboard.swift
+//  DisplayPaperVC+Keyboard.swift
 //  noteForU
 //
-//  Created by Willy on 2017/10/3.
+//  Created by Willy on 2017/10/5.
 //  Copyright © 2017年 Willy. All rights reserved.
 //
 
 import Foundation
 
-extension PaperViewController {
-    
+extension DisplayPaperViewController {
     func addDoneButtonOnKeyboard(target:UITextView) {
         
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
@@ -100,9 +99,6 @@ extension PaperViewController {
         textView.selectedRange = newSelectedRange
         textView.attributedText = mutableStr
         attString = mutableStr
+        
     }
-    
 }
-
-
-

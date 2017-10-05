@@ -19,6 +19,9 @@
 		D7303CFC1F8254230052717E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CFB1F8254230052717E /* Color.swift */; };
 		D7303D011F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */; };
 		D7303D031F8320720052717E /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D7303D021F83206F0052717E /* delete.png */; };
+		D74A6BF91F8617F900335E7E /* PaperViewController + IMGresize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */; };
+		D74A6BFB1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A6BFA1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift */; };
+		D74A6BFD1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A6BFC1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift */; };
 		D781357C1F833E320001BB7F /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781357B1F833E320001BB7F /* Keyboard.swift */; };
 		D78135801F8341360001BB7F /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357E1F8341320001BB7F /* keyboard.png */; };
 		D78135811F8341380001BB7F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357F1F8341320001BB7F /* photo.png */; };
@@ -58,6 +61,9 @@
 		D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		D7303D021F83206F0052717E /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		D7303D071F8323B70052717E /* colorplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorplate.png; sourceTree = "<group>"; };
+		D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaperViewController + IMGresize.swift"; sourceTree = "<group>"; };
+		D74A6BFA1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayPaperVC+Keyboard.swift"; sourceTree = "<group>"; };
+		D74A6BFC1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayPaperVC+IMGresize.swift"; sourceTree = "<group>"; };
 		D781357B1F833E320001BB7F /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		D781357E1F8341320001BB7F /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
 		D781357F1F8341320001BB7F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				D7303CF91F8253040052717E /* GestureRecognizer.swift */,
 				D7303CFB1F8254230052717E /* Color.swift */,
 				D781357B1F833E320001BB7F /* Keyboard.swift */,
+				D74A6BFA1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift */,
+				D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */,
+				D74A6BFC1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift */,
 			);
 			path = Method;
 			sourceTree = "<group>";
@@ -336,6 +345,7 @@
 			files = (
 				D7D267CA1F83319800829B43 /* UsersManager.swift in Sources */,
 				D701B62C1F7B470100A4AE87 /* ViewController.swift in Sources */,
+				D74A6BFD1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift in Sources */,
 				D701B62A1F7B470100A4AE87 /* AppDelegate.swift in Sources */,
 				D7303CF31F824D370052717E /* ContainerViewController.swift in Sources */,
 				D7D267C61F8330C400829B43 /* DataModel.xcdatamodeld in Sources */,
@@ -348,6 +358,8 @@
 				D7303CF21F824D370052717E /* MenuTableViewController.swift in Sources */,
 				D7EAC6871F85D42B00413D5F /* DisplayPaperViewController.swift in Sources */,
 				D7303CFA1F8253040052717E /* GestureRecognizer.swift in Sources */,
+				D74A6BF91F8617F900335E7E /* PaperViewController + IMGresize.swift in Sources */,
+				D74A6BFB1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift in Sources */,
 				D7ECC6281F7D14C300C558CE /* MyTableViewCell.swift in Sources */,
 				D7BAF6FE1F7E2FB600898BBA /* PaperViewController.swift in Sources */,
 				D7D267CB1F83319800829B43 /* CoreDataManager.swift in Sources */,

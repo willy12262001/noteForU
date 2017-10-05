@@ -27,13 +27,25 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         //鍵盤上加toolbar
         addDoneButtonOnKeyboard(target: textView)
         
+        //讀取coreData資料
         dateLabel.text = infoDataManager?.infoItem?.dateString
         textView.text = infoDataManager?.infoItem?.content
+        //從NSData轉成我指定的屬性
+        if let x = infoDataManager?.infoItem?.attStr {
+            let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: x)
+            
+                textView.attributedText = unarchiveAttStr as! NSAttributedString
+        }
         //設定 cell顏色
         let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: (infoDataManager?.infoItem?.color)!)
         let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: (infoDataManager?.infoItem?.colorL)!)
         bodyColor.backgroundColor = unarchiveColor as? UIColor
         head.backgroundColor = unarchiveColorL as? UIColor
+        
+        //讓全域變數都改成自己
+        color = unarchiveColor as! UIColor
+        colorL = unarchiveColorL as! UIColor
+        currentDate = infoDataManager?.infoItem?.dateString
         
     }
 
@@ -43,12 +55,27 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
     }
     //MARK: - BTN
     @IBAction func backTo(_ sender: Any) {
-        do {
-            try infoDataManager?.infoItem?.managedObjectContext?.save()
-        } catch {
-            NSLog("Error for infoItem save")
-        }
-        dismiss(animated: true, completion: nil)
+        content = textView.text
+        attString = textView.attributedText
+        
+        infoDataManager?.editInfo(originalItem: infoDataManager?.infoItem, completion: { (success, item) in
+            
+            guard success == true else {
+                return
+            }
+            
+            infoDataManager?.saveContext() { (success) in
+                
+                if success {
+                    NSLog("==========sucess save==========")
+                } else {
+                    NSLog("Save Fail")
+                }
+            }
+            self.dismiss(animated: true, completion: nil)
+            
+        })
+        
     }
    
     @IBAction func deletePage(_ sender: Any) {
@@ -64,9 +91,7 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
                 NSLog("Save Fail")
             }
         }
-        
         dismiss(animated: true, completion: nil)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
