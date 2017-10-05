@@ -2,11 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Info" representedClassName="Info" syncable="YES" codeGenerationType="class">
         <attribute name="color" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="colorB" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="colorG" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="colorR" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="colorL" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateString" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="photoo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="info" inverseEntity="Photo" syncable="YES"/>
         <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="info" inverseEntity="Users" syncable="YES"/>
     </entity>
@@ -24,7 +23,7 @@
         <relationship name="info" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Info" inverseName="users" inverseEntity="Info" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Info" positionX="-81" positionY="-18" width="128" height="165"/>
+        <element name="Info" positionX="-81" positionY="-18" width="128" height="150"/>
         <element name="Photo" positionX="124" positionY="63" width="128" height="75"/>
         <element name="Users" positionX="-297" positionY="-7" width="128" height="148"/>
     </elements>

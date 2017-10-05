@@ -32,28 +32,27 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         //鍵盤上加toolbar
         addDoneButtonOnKeyboard(target: textView)
         //剛打開的背景顏色
+        color = UIColor(red: 0.98, green: 1, blue: 0.58, alpha: 1)
+        colorL = UIColor(red: 0.8, green: 0.75, blue: 0.53, alpha: 1)
         paperView.backgroundColor = color
-        colorR = 0.98
-        colorG = 1
-        colorB = 0.58
-        
+        head.backgroundColor = colorL
+        //顯示時間在dateLabel
+        dateLabel.text = dateSetting()
+        currentDate = dateSetting()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //MARK: - FuncBTN
     @IBAction func backToPage(_ sender: Any) {
         //創物件並存擋
         content = textView.text
+        
         infoDataManager?.extractedFunc()
         
         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func deletePage(_ sender: Any) {
-        
     }
     
     
@@ -73,11 +72,11 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let yellow = UIColor(red: 0.98, green: 1, blue: 0.58, alpha: 1)
         paperView.backgroundColor = yellow
         
-        colorR = 0.98
-        colorG = 1
-        colorB = 0.58
+        let headColor = UIColor(red: 0.8, green: 0.75, blue: 0.53, alpha: 1)
+        head.backgroundColor = headColor
         
         color = yellow
+        colorL = headColor
         
     }
     @IBAction func orangeBTN(_ sender: Any) {
@@ -85,11 +84,11 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let orange = UIColor(red: 0.99, green: 0.62, blue: 0.25, alpha: 1)
         paperView.backgroundColor = orange
         
-        colorR = 0.99
-        colorG = 0.62
-        colorB = 0.25
+        let headColor = UIColor(red: 0.6, green: 0.38, blue: 0.2, alpha: 1)
+        head.backgroundColor = headColor
         
         color = orange
+        colorL = headColor
         
     }
     @IBAction func pinkBTN(_ sender: Any) {
@@ -97,11 +96,11 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let pink = UIColor(red: 0.99, green: 0.61, blue: 0.98, alpha: 1)
         paperView.backgroundColor = pink
         
-        colorR = 0.99
-        colorG = 0.61
-        colorB = 0.98
+        let headColor = UIColor(red: 0.68, green: 0.42, blue: 0.68, alpha: 1)
+        head.backgroundColor = headColor
         
         color = pink
+        colorL = headColor
         
     }
     @IBAction func greenBTN(_ sender: Any) {
@@ -109,11 +108,11 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let green = UIColor(red: 0.59, green: 0.92, blue: 0.58, alpha: 1)
         paperView.backgroundColor = green
         
-        colorR = 0.59
-        colorG = 0.92
-        colorB = 0.58
+        let headColor = UIColor(red: 0.34, green: 0.52, blue: 0.33, alpha: 1)
+        head.backgroundColor = headColor
         
         color = green
+        colorL = headColor
         
     }
     @IBAction func blueBTN(_ sender: Any) {
@@ -121,13 +120,30 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let blue = UIColor(red: 0.64, green: 1, blue: 0.95, alpha: 1)
         paperView.backgroundColor = blue
         
-        colorR = 0.64
-        colorG = 1
-        colorB = 0.95
+        let headColor = UIColor(red: 0.49, green: 0.77, blue: 0.73, alpha: 1)
+        head.backgroundColor = headColor
         
         color = blue
+        colorL = headColor
         
     }
+    //MARK: - Method
+    func dateSetting() -> String{
+        
+        let currentDay = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd_HH:mm"
+        
+        let customCurrentDay = formatter.string(from: currentDay)
+        
+        return customCurrentDay
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.post(name:NSNotification.Name(rawValue: "NoteUUU"), object: nil)
+    }
+    
 
     /*
     // MARK: - Navigation

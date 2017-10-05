@@ -31,6 +31,7 @@
 		D7D267CB1F83319800829B43 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D267C91F83319800829B43 /* CoreDataManager.swift */; };
 		D7D267CE1F8334D200829B43 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D267CD1F8334D200829B43 /* GlobalVariables.swift */; };
 		D7D267D01F83358900829B43 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D267CF1F83358900829B43 /* InfoManager.swift */; };
+		D7EAC6871F85D42B00413D5F /* DisplayPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EAC6861F85D42B00413D5F /* DisplayPaperViewController.swift */; };
 		D7ECC6261F7D14A500C558CE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECC6251F7D14A500C558CE /* TableViewController.swift */; };
 		D7ECC6281F7D14C300C558CE /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECC6271F7D14C300C558CE /* MyTableViewCell.swift */; };
 		FCF0824B54514269F2C09A52 /* Pods_noteForU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9330EB013BE9C7EA94F1FC1A /* Pods_noteForU.framework */; };
@@ -67,6 +68,7 @@
 		D7D267C91F83319800829B43 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D7D267CD1F8334D200829B43 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		D7D267CF1F83358900829B43 /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
+		D7EAC6861F85D42B00413D5F /* DisplayPaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPaperViewController.swift; sourceTree = "<group>"; };
 		D7ECC6251F7D14A500C558CE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D7ECC6271F7D14C300C558CE /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		E174C2DDDADE24E33B9F6DB3 /* Pods-noteForU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noteForU.release.xcconfig"; path = "Pods/Target Support Files/Pods-noteForU/Pods-noteForU.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,8 +124,8 @@
 		D701B6281F7B470100A4AE87 /* noteForU */ = {
 			isa = PBXGroup;
 			children = (
-				D7303CFE1F8254340052717E /* VC */,
 				D701B6291F7B470100A4AE87 /* AppDelegate.swift */,
+				D7303CFE1F8254340052717E /* VC */,
 				D7D267CC1F8331A000829B43 /* Data */,
 				D7303CF41F824D3E0052717E /* SW */,
 				D701B6301F7B470100A4AE87 /* Assets.xcassets */,
@@ -167,6 +169,7 @@
 				D7ECC6251F7D14A500C558CE /* TableViewController.swift */,
 				D7ECC6271F7D14C300C558CE /* MyTableViewCell.swift */,
 				D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */,
+				D7EAC6861F85D42B00413D5F /* DisplayPaperViewController.swift */,
 				D7BAF6D81F7DE07900898BBA /* HiViewController.swift */,
 			);
 			path = VC;
@@ -343,6 +346,7 @@
 				D781357C1F833E320001BB7F /* Keyboard.swift in Sources */,
 				D7BAF6D91F7DE07900898BBA /* HiViewController.swift in Sources */,
 				D7303CF21F824D370052717E /* MenuTableViewController.swift in Sources */,
+				D7EAC6871F85D42B00413D5F /* DisplayPaperViewController.swift in Sources */,
 				D7303CFA1F8253040052717E /* GestureRecognizer.swift in Sources */,
 				D7ECC6281F7D14C300C558CE /* MyTableViewCell.swift in Sources */,
 				D7BAF6FE1F7E2FB600898BBA /* PaperViewController.swift in Sources */,

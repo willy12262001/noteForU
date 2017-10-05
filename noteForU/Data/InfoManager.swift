@@ -50,19 +50,17 @@ class InfoManager:CoreDataManager<Info> {
             finalItem = infoDataManager?.createItem()
             finalItem?.date = NSDate() as Date
         }
-        if let colorb = colorB{
-            finalItem?.colorB = colorb
-        }
+        let dataColor = NSKeyedArchiver.archivedData(withRootObject: color)
+        let dataColorL = NSKeyedArchiver.archivedData(withRootObject: colorL)
+        finalItem?.color = dataColor
+        finalItem?.colorL = dataColorL
         
-        if let colorr = colorR {
-            finalItem?.colorR = colorr
-        }
-        
-        if let colorg = colorG {
-            finalItem?.colorG = colorg
-        }
+  
         if let contentt = content {
             finalItem?.content = contentt
+        }
+        if let date = currentDate {
+            finalItem?.dateString = date
         }
         completion(true,finalItem)
     }
