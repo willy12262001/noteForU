@@ -51,6 +51,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     @IBAction func backToPage(_ sender: Any) {
         //創物件並存擋
         attString = textView.attributedText
+        content = textView.text
         
         infoDataManager?.extractedFunc()
         
@@ -141,7 +142,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         
         return customCurrentDay
     }
-    
+    //MARK: - NotificationCenter.default.post
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "NoteUUU"), object: nil)
     }

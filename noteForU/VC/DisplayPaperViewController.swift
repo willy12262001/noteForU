@@ -80,6 +80,7 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         //        content = textView.text
         print(imagesArray.count)
         attString = textView.attributedText
+        content = textView.text
         
         infoDataManager?.editInfo(originalItem: infoDataManager?.infoItem, completion: { (success, item) in
             

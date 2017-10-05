@@ -35,7 +35,7 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //MARK: - Collection
+    //MARK: - CollectionDelegate
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -76,7 +76,7 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         
     }
     
-    //MARK: - collectionViewDelegete
+    //MARK: - UICollectionViewDelegateFlowLayout
     //設定cell 與view間距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 7, 10, 7)

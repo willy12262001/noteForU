@@ -8,23 +8,63 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var menuBTN: UIBarButtonItem!
     
+    @IBOutlet weak var tableVIew: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         gesture?.turnOnMenu(target: menuBTN, VCtarget: self)
+        //觀察者
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name:NSNotification.Name(rawValue:"NoteUUU"), object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - Methods
+    @objc func reloadTableView()  {
+        tableVIew.reloadData()
+    }
+    //MARK: - AddBTN
+    @IBAction func addItem(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PaperViewController") as! PaperViewController
+        present(vc, animated: true, completion: nil)
+    }
+    //MARK: - tableViewDelegate
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    @IBAction func addItem(_ sender: Any) {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return infoDataManager?.totalCount() ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
+        
+        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
+            cell.dateLabel.text = item.dateString
+            cell.contentLabel.text = item.content
+            
+            //設定 cell顏色
+            let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: item.color!)
+            let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: item.colorL!)
+            cell.bodyColor.backgroundColor = unarchiveColor as? UIColor
+            cell.titleColor.backgroundColor = unarchiveColorL as? UIColor
+        }
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DisplayPaperViewController") as! DisplayPaperViewController
+        
+        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
+            infoDataManager?.giveValue(toInfoItem: item)
+        }
+        present(vc, animated: true, completion: nil)
     }
     
     /*
