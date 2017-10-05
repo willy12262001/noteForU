@@ -50,7 +50,11 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         
         if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
             cell.dateLabel.text = item.dateString
-            cell.contentLabel.text = item.content
+            
+            let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: item.attStr!) as! NSAttributedString
+                
+            cell.contentLabel.attributedText = unarchiveAttStr
+            
             //設定 cell顏色
             let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: item.color!)
             let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: item.colorL!)

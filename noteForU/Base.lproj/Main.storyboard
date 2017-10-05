@@ -186,8 +186,8 @@
                                 <color key="backgroundColor" red="0.40746859058671692" green="0.36274037454370356" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5t5-HM-8vI">
-                                <rect key="frame" x="0.0" y="66.5" width="375" height="600.5"/>
-                                <color key="backgroundColor" red="1" green="0.53237517970000003" blue="0.73432489199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="600.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sgL-on-fi1">
                                     <size key="itemSize" width="175" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -614,15 +614,15 @@
                                 <constraints>
                                     <constraint firstItem="NoQ-C9-gTY" firstAttribute="top" secondItem="0lQ-RH-PJQ" secondAttribute="top" id="0x5-3D-8Hx"/>
                                     <constraint firstItem="EpS-gc-xLC" firstAttribute="leading" secondItem="0lQ-RH-PJQ" secondAttribute="leading" id="3pa-mG-PYM"/>
-                                    <constraint firstAttribute="bottom" secondItem="Byl-pv-JqP" secondAttribute="bottom" id="AKQ-Pd-wrD"/>
+                                    <constraint firstItem="Byl-pv-JqP" firstAttribute="leading" secondItem="0lQ-RH-PJQ" secondAttribute="leading" id="Gss-q2-Bes"/>
+                                    <constraint firstAttribute="bottom" secondItem="Byl-pv-JqP" secondAttribute="bottom" id="KGw-7y-93k"/>
                                     <constraint firstAttribute="trailing" secondItem="NoQ-C9-gTY" secondAttribute="trailing" id="LiK-fX-cAd"/>
-                                    <constraint firstItem="Byl-pv-JqP" firstAttribute="top" secondItem="NoQ-C9-gTY" secondAttribute="bottom" id="PHj-wn-ulb"/>
-                                    <constraint firstItem="Byl-pv-JqP" firstAttribute="leading" secondItem="0lQ-RH-PJQ" secondAttribute="leading" id="ZJx-7N-oBP"/>
                                     <constraint firstItem="EpS-gc-xLC" firstAttribute="height" secondItem="NoQ-C9-gTY" secondAttribute="height" id="aFs-Fg-4IM"/>
                                     <constraint firstItem="NoQ-C9-gTY" firstAttribute="height" secondItem="0lQ-RH-PJQ" secondAttribute="height" multiplier="0.1" id="hqJ-tC-qHk"/>
                                     <constraint firstItem="NoQ-C9-gTY" firstAttribute="leading" secondItem="0lQ-RH-PJQ" secondAttribute="leading" id="kg0-cu-84Q"/>
                                     <constraint firstItem="EpS-gc-xLC" firstAttribute="top" secondItem="NoQ-C9-gTY" secondAttribute="bottom" id="mnA-KJ-QPW"/>
-                                    <constraint firstAttribute="trailing" secondItem="Byl-pv-JqP" secondAttribute="trailing" id="yhg-pp-OTu"/>
+                                    <constraint firstItem="Byl-pv-JqP" firstAttribute="top" secondItem="NoQ-C9-gTY" secondAttribute="bottom" id="pAy-DK-x9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Byl-pv-JqP" secondAttribute="trailing" id="ssG-qb-xai"/>
                                     <constraint firstAttribute="trailing" secondItem="EpS-gc-xLC" secondAttribute="trailing" id="zLd-7e-c7J"/>
                                 </constraints>
                             </view>
@@ -648,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRm-3V-irT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4713" y="-228"/>
+            <point key="canvasLocation" x="4712.8000000000002" y="-228.03598200899552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eTW-w2-WN9">

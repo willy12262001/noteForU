@@ -85,8 +85,9 @@ extension PaperViewController {
         //把圖片設定成附件
         let attachment = NSTextAttachment()
         //resize photo
-        attachment.image = resizeImgage(input: photoImage)
-        attachment.bounds = CGRect(x: 0 , y: 0, width: resizeImgage(input: photoImage).size.width * 0.45, height: resizeImgage(input: photoImage).size.height * 0.45)
+        let image = resizeImgage(input: photoImage)
+        attachment.image = image
+        attachment.bounds = CGRect(x: 0 , y: 0, width: image.size.width * 0.4 , height: image.size.height * 0.4)
         //轉換成可變本文
         let attStr = NSAttributedString(attachment: attachment)
         //獲取textView的所有文本
@@ -96,8 +97,8 @@ extension PaperViewController {
         mutableStr.insert(attStr, at: selectedRange.location)
         
         mutableStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 20), range: NSMakeRange(0,mutableStr.length))
-        let newSelectedRange = NSMakeRange(selectedRange.location + 1, 0)
-        textView.selectedRange = newSelectedRange
+//        let newSelectedRange = NSMakeRange(selectedRange.location + 1, 0)
+//        textView.selectedRange = newSelectedRange
         textView.attributedText = mutableStr
         attString = mutableStr
     }

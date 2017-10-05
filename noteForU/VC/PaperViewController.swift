@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate{
     //身體顏色
     @IBOutlet weak var paperView: UIView!
     
@@ -23,6 +23,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textView.delegate = self
         //畫面圓角
         paperView.clipsToBounds = true
         head.clipsToBounds = true
@@ -39,6 +40,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         //顯示時間在dateLabel
         dateLabel.text = dateSetting()
         currentDate = dateSetting()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +50,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     //MARK: - FuncBTN
     @IBAction func backToPage(_ sender: Any) {
         //創物件並存擋
-        content = textView.text
+        attString = textView.attributedText
         
         infoDataManager?.extractedFunc()
         
@@ -143,7 +145,6 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "NoteUUU"), object: nil)
     }
-    
 
     /*
     // MARK: - Navigation
