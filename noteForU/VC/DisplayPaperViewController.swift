@@ -27,12 +27,12 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         bodyColor.layer.cornerRadius = 10
         //鍵盤上加toolbar
         addDoneButtonOnKeyboard(target: textView)
-        
         //讀取coreData資料
         dateLabel.text = infoDataManager?.infoItem?.dateString
         //從NSData轉成我指定的屬性
         if let x = infoDataManager?.infoItem?.attStr {
             let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: x) as! NSAttributedString
+            
             unarchiveAttStr.enumerateAttribute(NSAttributedStringKey.attachment, in: NSMakeRange(0, unarchiveAttStr.length), options: [], using: { (value, range, stop) in
                 
                 if value is NSTextAttachment {
@@ -117,7 +117,7 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         }
         dismiss(animated: true, completion: nil)
     }
-    
+    //MARK: -  viewWillDisappear
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "NoteUUU"), object: nil)
     }

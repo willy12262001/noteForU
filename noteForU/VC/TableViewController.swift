@@ -16,8 +16,10 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Open Menu
         gesture?.turnOnMenu(target: menuBTN, VCtarget: self)
+        //設定cell高度
+        tableVIew.rowHeight = 110
         //觀察者
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name:NSNotification.Name(rawValue:"NoteUUU"), object: nil)
     }

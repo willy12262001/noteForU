@@ -79,11 +79,12 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
     //MARK: - UICollectionViewDelegateFlowLayout
     //設定cell 與view間距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 7, 10, 7)
+        //(上,左,下,又)
+        return UIEdgeInsetsMake(0, 5, 0, 5)
     }
     //設定cell上下間距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 0
     }
     //設定cell之間的間距
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
