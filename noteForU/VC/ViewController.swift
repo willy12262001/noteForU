@@ -46,27 +46,27 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return infoDataManager?.totalCount() ?? 0
+        return usersDataManager.userItem?.info?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
         
-        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
-            cell.dateLabel.text = item.dateString
+        //取得useritem裡的info
+        let info = usersDataManager.userItem?.info?.allObjects[indexPath.row] as! Info
+        
+            cell.dateLabel.text = info.dateString
             
-            let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: item.attStr!) as! NSAttributedString
+            let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: info.attStr!) as! NSAttributedString
                 
             cell.contentLabel.attributedText = unarchiveAttStr
             
             //設定 cell顏色
-            let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: item.color!)
-            let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: item.colorL!)
+            let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: info.color!)
+            let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: info.colorL!)
             cell.containerView.backgroundColor = unarchiveColor as? UIColor
             cell.dateLabel.backgroundColor = unarchiveColorL as? UIColor
-        }
-        
         
         return cell
     }
@@ -74,9 +74,10 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DisplayPaperViewController") as! DisplayPaperViewController
         
-        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
-            infoDataManager?.giveValue(toInfoItem: item)
-        }
+        let info = usersDataManager.userItem?.info?.allObjects[indexPath.row] as! Info
+   
+        infoDataManager?.giveValue(toInfoItem: info)
+    
         present(vc, animated: true, completion: nil)
         
     }

@@ -38,24 +38,23 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return infoDataManager?.totalCount() ?? 0
+        return usersDataManager.userItem?.info?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         
-        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
-            cell.dateLabel.text = item.dateString
-            cell.contentLabel.text = item.content
+        let info = usersDataManager.userItem?.info?.allObjects[indexPath.row] as! Info
+        
+            cell.dateLabel.text = info.dateString
+            cell.contentLabel.text = info.content
             
             //設定 cell顏色
-            let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: item.color!)
-            let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: item.colorL!)
+            let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: info.color!)
+            let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: info.colorL!)
             cell.bodyColor.backgroundColor = unarchiveColor as? UIColor
             cell.titleColor.backgroundColor = unarchiveColorL as? UIColor
-        }
-        
-        
+
         return cell
     }
     
@@ -63,9 +62,10 @@ class TableViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DisplayPaperViewController") as! DisplayPaperViewController
         
-        if let item = infoDataManager?.fetchItemAt(index: indexPath.row) {
-            infoDataManager?.giveValue(toInfoItem: item)
-        }
+        let info = usersDataManager.userItem?.info?.allObjects[indexPath.row] as! Info
+        
+        infoDataManager?.giveValue(toInfoItem: info)
+    
         present(vc, animated: true, completion: nil)
     }
     

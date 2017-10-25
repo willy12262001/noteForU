@@ -9,8 +9,8 @@
 import Foundation
 
 var gesture:GestureRecognizer?
-var usersDataManager:UsersManager?
-var infoDataManager:InfoManager?
+var usersDataManager:UsersManager!
+var infoDataManager:InfoManager!
 let firebaseWorks = FirebaseWorks()
 //user專用
 var uuid:String? = nil

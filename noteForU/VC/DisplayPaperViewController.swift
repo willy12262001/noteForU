@@ -86,15 +86,12 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
             guard success == true else {
                 return
             }
-            
-            infoDataManager?.saveContext() { (success) in
-                
-                if success {
-                    NSLog("==========sucess save==========")
-                } else {
-                    NSLog("Save Fail")
-                }
+            do{
+            try usersDataManager.userItem?.managedObjectContext?.save()
+            } catch {
+                print("Error: can't save for the displayVC")
             }
+            
             self.dismiss(animated: true, completion: nil)
             
         })
@@ -105,15 +102,14 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         guard let item = infoDataManager?.infoItem else {
             return
         }
-        infoDataManager?.delete(item: item)
-        infoDataManager?.saveContext() { (success) in
-            
-            if success {
-                NSLog("==========sucess save==========")
-            } else {
-                NSLog("Save Fail")
-            }
+        usersDataManager.userItem?.managedObjectContext?.delete(item)
+        
+        do{
+            try usersDataManager.userItem?.managedObjectContext?.save()
+        } catch {
+            print("Error: can't save for the displayVC")
         }
+        
         dismiss(animated: true, completion: nil)
     }
     //MARK: -  viewWillDisappear

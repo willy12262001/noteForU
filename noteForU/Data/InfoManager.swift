@@ -30,16 +30,12 @@ class InfoManager:CoreDataManager<Info> {
             guard success == true else {
                 return
             }
+            do{
+              try usersDataManager.userItem?.managedObjectContext?.save()
+            } catch {
+                print("Error : can't save for the paperVC")
+            }
             
-            infoDataManager?.saveContext(completion: { (success) in
-                
-                if success {
-                    NSLog("==========sucess save==========")
-                } else {
-                    NSLog("Save Fail")
-                }
-                
-            })
         }
     }
     typealias EditDoneHandler = (_ success:Bool,_ resultItem:Info?) -> Void
@@ -47,7 +43,8 @@ class InfoManager:CoreDataManager<Info> {
     func editInfo(originalItem:Info?,completion:@escaping EditDoneHandler) {
         var finalItem = originalItem
         if finalItem == nil {
-            finalItem = infoDataManager?.createItem()
+            finalItem = infoDataManager?.createItemTo(target: usersDataManager.userItem!)
+            usersDataManager.userItem?.addToInfo(finalItem!)
             finalItem?.date = NSDate() as Date
         }
         //轉成DATA檔案

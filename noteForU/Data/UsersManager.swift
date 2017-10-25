@@ -28,20 +28,8 @@ class UsersManager:CoreDataManager<Users> {
         if let result = usersDataManager?.searchBy(keyword: uuid!, field: "uuid"){
             
             guard result != [] else {
+                //沒帳號的話創造
                 extractedFunc()
-                
-                if let result2 = usersDataManager?.searchBy(keyword: uuid!, field: "uuid") {
-                    
-                    for item in result2 {
-                        
-                        NSLog("uuid: \(item.uuid ?? "無此帳號")")
-                        
-                        guard uuid == item.uuid else {
-                            return
-                        }
-                        usersDataManager?.giveValue(toUserItem: item)
-                    }
-                }
                 return
             }
             //LogIn
@@ -56,26 +44,7 @@ class UsersManager:CoreDataManager<Users> {
             }
         }
     }
-    //Determine for 自創帳號
-    func Login(email:String) {
-        //判斷是否有資料在coredate裡
-        if let result = usersDataManager?.searchBy(keyword: email, field: "email"){
-            
-            guard result != [] else {
-                return
-            }
-            //LogIn
-            for item in result {
-                
-                NSLog("uuid: \(item.name ?? "無此帳號")")
-                
-                guard uuid == item.uuid else {
-                    return
-                }
-                usersDataManager?.giveValue(toUserItem: item)
-            }
-        }
-    }
+    
     //MARK: - EditUsers & Create
     func extractedFunc() {
         editUser(originalItem: nil) { (success, item) in
@@ -83,6 +52,8 @@ class UsersManager:CoreDataManager<Users> {
             guard success == true else {
                 return
             }
+            
+            usersDataManager?.giveValue(toUserItem: item!)
             
             usersDataManager?.saveContext(completion: { (success) in
                 
