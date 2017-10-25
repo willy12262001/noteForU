@@ -32,7 +32,9 @@
 		D78135811F8341380001BB7F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357F1F8341320001BB7F /* photo.png */; };
 		D784D3881F94460000E72FC0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784D3871F94460000E72FC0 /* SignInViewController.swift */; };
 		D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */ = {isa = PBXBuildFile; fileRef = D79100EB1FA07D2400B16923 /* userDefaultImage .png */; };
-		D7BAF6D91F7DE07900898BBA /* HiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF6D81F7DE07900898BBA /* HiViewController.swift */; };
+		D79100F01FA081D800B16923 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79100EF1FA081D800B16923 /* SettingTableViewController.swift */; };
+		D79100F21FA0850800B16923 /* UploadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79100F11FA0850800B16923 /* UploadTableViewController.swift */; };
+		D79100F41FA0851200B16923 /* DownloadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79100F31FA0851200B16923 /* DownloadTableViewController.swift */; };
 		D7BAF6FE1F7E2FB600898BBA /* PaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */; };
 		D7D267C21F8326F700829B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D701B6301F7B470100A4AE87 /* Assets.xcassets */; };
 		D7D267C61F8330C400829B43 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7D267C31F832CC700829B43 /* DataModel.xcdatamodeld */; };
@@ -81,7 +83,9 @@
 		D781357F1F8341320001BB7F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		D784D3871F94460000E72FC0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D79100EB1FA07D2400B16923 /* userDefaultImage .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefaultImage .png"; sourceTree = "<group>"; };
-		D7BAF6D81F7DE07900898BBA /* HiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiViewController.swift; sourceTree = "<group>"; };
+		D79100EF1FA081D800B16923 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		D79100F11FA0850800B16923 /* UploadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTableViewController.swift; sourceTree = "<group>"; };
+		D79100F31FA0851200B16923 /* DownloadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewController.swift; sourceTree = "<group>"; };
 		D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewController.swift; sourceTree = "<group>"; };
 		D7D267C41F832CC700829B43 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		D7D267C81F83319800829B43 /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
@@ -197,7 +201,9 @@
 				D7ECC6271F7D14C300C558CE /* MyTableViewCell.swift */,
 				D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */,
 				D7EAC6861F85D42B00413D5F /* DisplayPaperViewController.swift */,
-				D7BAF6D81F7DE07900898BBA /* HiViewController.swift */,
+				D79100EF1FA081D800B16923 /* SettingTableViewController.swift */,
+				D79100F11FA0850800B16923 /* UploadTableViewController.swift */,
+				D79100F31FA0851200B16923 /* DownloadTableViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D267CA1F83319800829B43 /* UsersManager.swift in Sources */,
+				D79100F41FA0851200B16923 /* DownloadTableViewController.swift in Sources */,
 				D701B62C1F7B470100A4AE87 /* ViewController.swift in Sources */,
 				D74A6BFD1F861F2600335E7E /* DisplayPaperVC+IMGresize.swift in Sources */,
 				D701B62A1F7B470100A4AE87 /* AppDelegate.swift in Sources */,
@@ -380,9 +387,9 @@
 				D7303CEF1F824CAF0052717E /* SWRevealViewController.m in Sources */,
 				D7303CFC1F8254230052717E /* Color.swift in Sources */,
 				D781357C1F833E320001BB7F /* Keyboard.swift in Sources */,
-				D7BAF6D91F7DE07900898BBA /* HiViewController.swift in Sources */,
 				D7303CF21F824D370052717E /* MenuTableViewController.swift in Sources */,
 				D7EAC6871F85D42B00413D5F /* DisplayPaperViewController.swift in Sources */,
+				D79100F01FA081D800B16923 /* SettingTableViewController.swift in Sources */,
 				D7303CFA1F8253040052717E /* GestureRecognizer.swift in Sources */,
 				D74A6BF91F8617F900335E7E /* PaperViewController + IMGresize.swift in Sources */,
 				D74A6BFB1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift in Sources */,
@@ -393,6 +400,7 @@
 				D7ECC6261F7D14A500C558CE /* TableViewController.swift in Sources */,
 				D7D267CE1F8334D200829B43 /* GlobalVariables.swift in Sources */,
 				D7D267D01F83358900829B43 /* InfoManager.swift in Sources */,
+				D79100F21FA0850800B16923 /* UploadTableViewController.swift in Sources */,
 				D749B68B1F944B2200BBCA7A /* AlertSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,7 +31,7 @@ class InfoManager:CoreDataManager<Info> {
                 return
             }
             do{
-              try usersDataManager.userItem?.managedObjectContext?.save()
+                try usersDataManager.userItem?.managedObjectContext?.save()
             } catch {
                 print("Error : can't save for the paperVC")
             }
@@ -62,6 +62,35 @@ class InfoManager:CoreDataManager<Info> {
         }
         if let date = currentDate {
             finalItem?.dateString = date
+        }
+        completion(true,finalItem)
+    }
+    //下載後的存取
+    func editInfoForDownload(originalItem:Info?,completion:@escaping EditDoneHandler) {
+        var finalItem = originalItem
+        if finalItem == nil {
+            finalItem = infoDataManager?.createItemTo(target: usersDataManager.userItem!)
+            usersDataManager.userItem?.addToInfo(finalItem!)
+            
+            finalItem?.date = NSDate() as Date
+            
+        }
+        //string轉成DATA檔案
+        let colorString = responseDict!["color"] as! String
+        let colorData = Data(base64Encoded: colorString, options: .ignoreUnknownCharacters)
+        finalItem?.color = colorData
+        
+        let colorLString = responseDict!["colorL"] as! String
+        let colorLData = Data(base64Encoded: colorLString, options: .ignoreUnknownCharacters)
+        finalItem?.colorL = colorLData
+        
+        let attString = responseDict!["attStr"] as! String
+        let attData = Data(base64Encoded: attString, options: .ignoreUnknownCharacters)
+        finalItem?.attStr = attData
+        
+        
+        if let date = responseDict!["date"] {
+            finalItem?.dateString = date as! String
         }
         completion(true,finalItem)
     }

@@ -33,4 +33,8 @@ var attString:NSAttributedString? = nil
 var content:String? = nil
 var photo:Data? = nil
 var currentDate:String? = nil
+//下載後的檔案專用
+var responseDict:NSDictionary? = nil
+//alert專用
+var alertController:UIAlertController? = nil
 
