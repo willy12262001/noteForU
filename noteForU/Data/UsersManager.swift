@@ -35,7 +35,7 @@ class UsersManager:CoreDataManager<Users> {
             //LogIn
             for item in result {
                 
-                NSLog("uuid: \(item.uuid ?? "無此帳號")")
+//                NSLog("uuid: \(item.uuid ?? "無此帳號")")
                 
                 guard uuid == item.uuid else {
                     return

@@ -31,6 +31,7 @@
 		D78135801F8341360001BB7F /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357E1F8341320001BB7F /* keyboard.png */; };
 		D78135811F8341380001BB7F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357F1F8341320001BB7F /* photo.png */; };
 		D784D3881F94460000E72FC0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784D3871F94460000E72FC0 /* SignInViewController.swift */; };
+		D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */ = {isa = PBXBuildFile; fileRef = D79100EB1FA07D2400B16923 /* userDefaultImage .png */; };
 		D7BAF6D91F7DE07900898BBA /* HiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF6D81F7DE07900898BBA /* HiViewController.swift */; };
 		D7BAF6FE1F7E2FB600898BBA /* PaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */; };
 		D7D267C21F8326F700829B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D701B6301F7B470100A4AE87 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		D781357E1F8341320001BB7F /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
 		D781357F1F8341320001BB7F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		D784D3871F94460000E72FC0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D79100EB1FA07D2400B16923 /* userDefaultImage .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefaultImage .png"; sourceTree = "<group>"; };
 		D7BAF6D81F7DE07900898BBA /* HiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiViewController.swift; sourceTree = "<group>"; };
 		D7BAF6FD1F7E2FB600898BBA /* PaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperViewController.swift; sourceTree = "<group>"; };
 		D7D267C41F832CC700829B43 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		D781357D1F8341260001BB7F /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				D79100EB1FA07D2400B16923 /* userDefaultImage .png */,
 				D70C9AC41FA05D1F00580A49 /* loginfacebook.png */,
 				D70C9AC21FA058CF00580A49 /* googleSign.png */,
 				D781357E1F8341320001BB7F /* keyboard.png */,
@@ -298,6 +301,7 @@
 			files = (
 				D78135811F8341380001BB7F /* photo.png in Resources */,
 				D70C9ABD1FA04F3700580A49 /* GoogleService-Info.plist in Resources */,
+				D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */,
 				D7303D031F8320720052717E /* delete.png in Resources */,
 				D7D267C71F83311000829B43 /* colorplate.png in Resources */,
 				D78135801F8341360001BB7F /* keyboard.png in Resources */,
