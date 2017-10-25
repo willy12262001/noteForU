@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UICollectionViewDropDelegate,UICollectionViewDragDelegate{
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menuBTN: UIBarButtonItem!
@@ -17,8 +17,13 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         gesture?.turnOnMenu(target: menuBTN, VCtarget: self)
+        //collectionview
+        collectionView.dragDelegate = self
+        collectionView.dropDelegate = self
+        collectionView.dragInteractionEnabled = true
         
         collectionView.reloadData()
+        //觀察者,如果收到訊息reloadTableView
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name:NSNotification.Name(rawValue:"NoteUUU"), object: nil)
     }
     //MARK: - Method
@@ -73,6 +78,17 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
             infoDataManager?.giveValue(toInfoItem: item)
         }
         present(vc, animated: true, completion: nil)
+        
+    }
+    //MARK: - CollectionViewDropDelegate &Drag
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        //
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        
+        let item = UIDragItem(itemProvider: NSItemProvider())
+        return [item]
         
     }
     

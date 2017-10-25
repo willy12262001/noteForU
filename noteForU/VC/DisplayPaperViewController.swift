@@ -31,8 +31,9 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
         dateLabel.text = infoDataManager?.infoItem?.dateString
         //從NSData轉成我指定的屬性
         if let x = infoDataManager?.infoItem?.attStr {
+            //從Data檔案轉回NSAttributedString
             let unarchiveAttStr = NSKeyedUnarchiver.unarchiveObject(with: x) as! NSAttributedString
-            
+            //從NSAttributedString取回裡面的附件
             unarchiveAttStr.enumerateAttribute(NSAttributedStringKey.attachment, in: NSMakeRange(0, unarchiveAttStr.length), options: [], using: { (value, range, stop) in
                 
                 if value is NSTextAttachment {
@@ -54,11 +55,9 @@ class DisplayPaperViewController: UIViewController,UIImagePickerControllerDelega
                     }
                 }
             })
-            
             textView.attributedText = unarchiveAttStr
-            
         }
-        //設定 cell顏色
+        //讀取 cell顏色
         let unarchiveColor = NSKeyedUnarchiver.unarchiveObject(with: (infoDataManager?.infoItem?.color)!)
         let unarchiveColorL = NSKeyedUnarchiver.unarchiveObject(with: (infoDataManager?.infoItem?.colorL)!)
         bodyColor.backgroundColor = unarchiveColor as? UIColor

@@ -50,6 +50,7 @@ class InfoManager:CoreDataManager<Info> {
             finalItem = infoDataManager?.createItem()
             finalItem?.date = NSDate() as Date
         }
+        //轉成DATA檔案
         let dataColor = NSKeyedArchiver.archivedData(withRootObject: color)
         let dataColorL = NSKeyedArchiver.archivedData(withRootObject: colorL)
         finalItem?.color = dataColor

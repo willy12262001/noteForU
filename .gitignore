@@ -1,0 +1,56 @@
+*~
+.DS_Store
+
+# Exclude the build directory
+
+build/*
+
+# Exclude temp nibs and swap files
+
+*~.nib
+*.swp
+
+
+# Xcode
+!default.xcworkspace
+xcuserdata
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+DerivedData
+
+
+# Pods 套件
+Pods/*
+Podfile.lock
+InfoPlist.strings-e
+
+
+#Test 設定檔
+TestConfig.h
+
+
+# Obfuscate revision
+build
+symbols.h
+symbols*.json
+mach_o/*
+headers
+headers.obf
+build.obf
+Project/Work_BACKUP_34245.storyboard
+Project/Work_BASE_34245.storyboard
+Project/Work_LOCAL_34245.storyboard
+Project/Work_REMOTE_34245.storyboard
+Work.storyboard.orig
+Project.xcodeproj/project_BACKUP_18355.pbxproj
+Project.xcodeproj/project_BASE_18355.pbxproj
+Project.xcodeproj/project_LOCAL_18355.pbxproj
+Project.xcodeproj/project_REMOTE_18355.pbxproj

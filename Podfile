@@ -9,6 +9,12 @@ target 'noteForU' do
 
   # Pods for noteForU
  pod 'IQKeyboardManagerSwift'
-
+  pod 'GoogleSignIn'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
  
  end
