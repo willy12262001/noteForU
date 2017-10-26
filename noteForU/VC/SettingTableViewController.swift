@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingTableViewController: UITableViewController {
+class SettingTableViewController: UITableViewController ,MFMailComposeViewControllerDelegate{
     
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     let gesture = GestureRecognizer()
-    let items = [["資料手動上傳","備份資料下載"],["關於我們","意見反應"]]
+    let items = [["資料手動上傳","備份資料下載"],["意見反應"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +62,29 @@ class SettingTableViewController: UITableViewController {
                 navigationController?.pushViewController(vc2, animated: true)
             }
         } else if indexPath.section == 1 {
-            //...
+            if indexPath.row == 0 {
+                self.sendEmail()
+            }
         } else {
             //...
         }
+    }
+    //MARK: - Email
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["willy12262001@gmail.com"])
+            mail.setMessageBody("<p></p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     /*
     // Override to support conditional editing of the table view.

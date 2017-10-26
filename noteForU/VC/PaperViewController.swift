@@ -136,7 +136,7 @@ class PaperViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         let currentDay = Date()
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd_HH:mm"
+        formatter.dateFormat = "yyyyMMdd_HH:mm:ss"
         
         let customCurrentDay = formatter.string(from: currentDay)
         

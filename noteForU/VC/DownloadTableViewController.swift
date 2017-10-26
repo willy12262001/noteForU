@@ -16,26 +16,26 @@ class DownloadTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let databaseRef = Database.database().reference().child("users").child(uuid!).child("record")
-        databaseRef.observe(.value, with: { [weak self](snapshot) in
-            if let downloadDict = snapshot.value as? [String:NSDictionary] {
-                self?.downloadData = downloadDict
-                self?.tableView!.reloadData()
-            }
-        })
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func reloadData() {
+        
+        let databaseRef = Database.database().reference().child("users").child(uuid!).child("record")
+        databaseRef.observe(.value, with: { [weak self](snapshot) in
+            if let downloadDict = snapshot.value as? [String:NSDictionary] {
+                self?.downloadData = downloadDict
+                self?.tableView!.reloadData()
+                print(self?.downloadData?.count ?? 0)
+            }
+        })
+    }
+    
     
     // MARK: - Table view data source
     
@@ -114,17 +114,49 @@ class DownloadTableViewController: UITableViewController {
      }
      */
     
-    /*
+    
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        guard let dataDict = downloadData else{
+            return
+        }
+        var keyArray = Array(dataDict.keys)
+        //選定databse裡的 record date
+        let date = keyArray[indexPath.row]
+        let desertRef = Storage.storage().reference().child(uuid!).child(date)
+        let databaseRef = Database.database().reference().child("users").child(uuid!).child("record").child(date)
+        alert.displayActivityIndicator(target: self, title: "刪除中\n")
+        //移除storage的物件
+        desertRef.delete(completion: {[weak self](error) in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+                alertController?.dismiss(animated: true, completion: nil)
+            } else {
+                // File deleted successfully
+                print("Child delete Correctly")
+                //把alert消掉
+                alertController?.dismiss(animated: true, completion: nil)
+                self?.navigationController?.popToRootViewController(animated: true)
+            }
+        })
+        //移除database裡的物件
+        databaseRef.removeValue(completionBlock: {[weak self](error, refer) in
+            if error != nil {
+                print(error?.localizedDescription)
+                alertController?.dismiss(animated: true, completion: nil)
+            } else {
+                print(refer)
+                print("Child Removed Correctly")
+            }
+        })
      } else if editingStyle == .insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
      }
      }
-     */
+ 
     
     /*
      // Override to support rearranging the table view.
