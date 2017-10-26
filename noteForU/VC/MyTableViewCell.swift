@@ -13,6 +13,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    
     @IBOutlet weak var titleColor: UIView!
     @IBOutlet weak var bodyColor: UIView!
     
@@ -23,7 +24,7 @@ class MyTableViewCell: UITableViewCell {
         titleColor.clipsToBounds = true
         contentLabel.clipsToBounds = true
         dateLabel.clipsToBounds = true
-        
+
         bodyColor.layer.cornerRadius = 10
         
     }

@@ -19,7 +19,6 @@
 		D7303CF21F824D370052717E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CF01F824D370052717E /* MenuTableViewController.swift */; };
 		D7303CF31F824D370052717E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CF11F824D370052717E /* ContainerViewController.swift */; };
 		D7303CFA1F8253040052717E /* GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CF91F8253040052717E /* GestureRecognizer.swift */; };
-		D7303CFC1F8254230052717E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CFB1F8254230052717E /* Color.swift */; };
 		D7303D011F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */; };
 		D7303D031F8320720052717E /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D7303D021F83206F0052717E /* delete.png */; };
 		D749B6891F944AAA00BBCA7A /* FirebaseWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D749B6881F944AAA00BBCA7A /* FirebaseWorks.swift */; };
@@ -31,6 +30,10 @@
 		D78135801F8341360001BB7F /* keyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357E1F8341320001BB7F /* keyboard.png */; };
 		D78135811F8341380001BB7F /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = D781357F1F8341320001BB7F /* photo.png */; };
 		D784D3881F94460000E72FC0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D784D3871F94460000E72FC0 /* SignInViewController.swift */; };
+		D787149B1FA1C379003D76E8 /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = D787149A1FA1C378003D76E8 /* Group.png */; };
+		D787149D1FA1C485003D76E8 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = D787149C1FA1C485003D76E8 /* setting.png */; };
+		D787149F1FA1CD57003D76E8 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D787149E1FA1CD57003D76E8 /* background.png */; };
+		D78714A31FA1DB34003D76E8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D78714A21FA1DB34003D76E8 /* logo.png */; };
 		D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */ = {isa = PBXBuildFile; fileRef = D79100EB1FA07D2400B16923 /* userDefaultImage .png */; };
 		D79100F01FA081D800B16923 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79100EF1FA081D800B16923 /* SettingTableViewController.swift */; };
 		D79100F21FA0850800B16923 /* UploadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79100F11FA0850800B16923 /* UploadTableViewController.swift */; };
@@ -69,7 +72,6 @@
 		D7303CF01F824D370052717E /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		D7303CF11F824D370052717E /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		D7303CF91F8253040052717E /* GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizer.swift; sourceTree = "<group>"; };
-		D7303CFB1F8254230052717E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		D7303D021F83206F0052717E /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		D7303D071F8323B70052717E /* colorplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorplate.png; sourceTree = "<group>"; };
@@ -82,6 +84,10 @@
 		D781357E1F8341320001BB7F /* keyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard.png; sourceTree = "<group>"; };
 		D781357F1F8341320001BB7F /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		D784D3871F94460000E72FC0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D787149A1FA1C378003D76E8 /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
+		D787149C1FA1C485003D76E8 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		D787149E1FA1CD57003D76E8 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		D78714A21FA1DB34003D76E8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D79100EB1FA07D2400B16923 /* userDefaultImage .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userDefaultImage .png"; sourceTree = "<group>"; };
 		D79100EF1FA081D800B16923 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		D79100F11FA0850800B16923 /* UploadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTableViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +187,6 @@
 				D749B68A1F944B2200BBCA7A /* AlertSetting.swift */,
 				D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */,
 				D7303CF91F8253040052717E /* GestureRecognizer.swift */,
-				D7303CFB1F8254230052717E /* Color.swift */,
 				D781357B1F833E320001BB7F /* Keyboard.swift */,
 				D74A6BFA1F861ED100335E7E /* DisplayPaperVC+Keyboard.swift */,
 				D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */,
@@ -222,10 +227,14 @@
 			children = (
 				D79100EB1FA07D2400B16923 /* userDefaultImage .png */,
 				D70C9AC41FA05D1F00580A49 /* loginfacebook.png */,
+				D787149C1FA1C485003D76E8 /* setting.png */,
+				D78714A21FA1DB34003D76E8 /* logo.png */,
 				D70C9AC21FA058CF00580A49 /* googleSign.png */,
+				D787149A1FA1C378003D76E8 /* Group.png */,
 				D781357E1F8341320001BB7F /* keyboard.png */,
 				D781357F1F8341320001BB7F /* photo.png */,
 				D7303D021F83206F0052717E /* delete.png */,
+				D787149E1FA1CD57003D76E8 /* background.png */,
 				D7303D071F8323B70052717E /* colorplate.png */,
 			);
 			path = Img;
@@ -306,13 +315,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78135811F8341380001BB7F /* photo.png in Resources */,
+				D787149B1FA1C379003D76E8 /* Group.png in Resources */,
+				D787149D1FA1C485003D76E8 /* setting.png in Resources */,
 				D70C9ABD1FA04F3700580A49 /* GoogleService-Info.plist in Resources */,
 				D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */,
 				D7303D031F8320720052717E /* delete.png in Resources */,
 				D7D267C71F83311000829B43 /* colorplate.png in Resources */,
 				D78135801F8341360001BB7F /* keyboard.png in Resources */,
 				D70C9AC51FA05D1F00580A49 /* loginfacebook.png in Resources */,
+				D787149F1FA1CD57003D76E8 /* background.png in Resources */,
 				D701B6341F7B470100A4AE87 /* LaunchScreen.storyboard in Resources */,
+				D78714A31FA1DB34003D76E8 /* logo.png in Resources */,
 				D7D267C21F8326F700829B43 /* Assets.xcassets in Resources */,
 				D701B62F1F7B470100A4AE87 /* Main.storyboard in Resources */,
 				D70C9AC31FA058D000580A49 /* googleSign.png in Resources */,
@@ -385,7 +398,6 @@
 				D701B65C1F7B51D900A4AE87 /* MyCollectionViewCell.swift in Sources */,
 				D749B6891F944AAA00BBCA7A /* FirebaseWorks.swift in Sources */,
 				D7303CEF1F824CAF0052717E /* SWRevealViewController.m in Sources */,
-				D7303CFC1F8254230052717E /* Color.swift in Sources */,
 				D781357C1F833E320001BB7F /* Keyboard.swift in Sources */,
 				D7303CF21F824D370052717E /* MenuTableViewController.swift in Sources */,
 				D7EAC6871F85D42B00413D5F /* DisplayPaperViewController.swift in Sources */,

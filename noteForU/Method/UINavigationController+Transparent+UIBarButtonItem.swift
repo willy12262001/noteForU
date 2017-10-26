@@ -14,10 +14,10 @@ extension UINavigationController {
         super.viewDidLoad()
         
         // 將NavigationBar改成透明，並設定title的字型、字體大小及顏色
-        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.isTranslucent = true
-        self.navigationBar.tintColor = UIColor.blue
+//        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationBar.shadowImage = UIImage()
+//        self.navigationBar.isTranslucent = true
+//        self.navigationBar.tintColor = UIColor.blue
 //        self.navigationBar.setBackgroundImage(UIImage(named: "01.jpg"), for: UIBarMetrics.default)
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Avenir", size: 24)!, NSAttributedStringKey.foregroundColor: UIColor.blue]
         
