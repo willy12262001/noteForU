@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UICollectionViewDropDelegate,UICollectionViewDragDelegate{
+class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menuBTN: UIBarButtonItem!
@@ -18,9 +18,9 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         // Do any additional setup after loading the view, typically from a nib.
         gesture?.turnOnMenu(target: menuBTN, VCtarget: self)
         //collectionview
-        collectionView.dragDelegate = self
-        collectionView.dropDelegate = self
-        collectionView.dragInteractionEnabled = true
+//        collectionView.dragDelegate = self
+//        collectionView.dropDelegate = self
+//        collectionView.dragInteractionEnabled = true
         
         collectionView.reloadData()
         //觀察者,如果收到訊息reloadTableView
@@ -82,16 +82,6 @@ class ViewController: UIViewController ,UICollectionViewDelegate,UICollectionVie
         
     }
     //MARK: - CollectionViewDropDelegate &Drag
-    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
-        //
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        
-        let item = UIDragItem(itemProvider: NSItemProvider())
-        return [item]
-        
-    }
     
     //MARK: - UICollectionViewDelegateFlowLayout
     //設定cell 與view間距

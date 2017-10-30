@@ -69,6 +69,7 @@ class SignInViewController: UIViewController,GIDSignInUIDelegate,GIDSignInDelega
                         DispatchQueue.main.async {
                             self?.fakeView.isHidden = true
                         }
+                        guestLoginBool = false
                         self?.present(vc, animated: true, completion: nil)
                         
                         
@@ -105,13 +106,17 @@ class SignInViewController: UIViewController,GIDSignInUIDelegate,GIDSignInDelega
                 DispatchQueue.main.async {
                     self?.fakeView.isHidden = true
                 }
+                guestLoginBool = false
                 self?.present(vc, animated: true, completion: nil)
                 
             }
         }
     }
     
-
+    @IBAction func guestLogin(_ sender: Any) {
+        alert.settingWithAct2(target: self, title: "警告", message: "使用訪客登入時，無法使用雲端上傳與下載功能", BTNtitle: "ok")
+    }
+    
     /*
     // MARK: - Navigation
 

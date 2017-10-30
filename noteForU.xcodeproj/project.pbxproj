@@ -21,6 +21,7 @@
 		D7303CFA1F8253040052717E /* GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303CF91F8253040052717E /* GestureRecognizer.swift */; };
 		D7303D011F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */; };
 		D7303D031F8320720052717E /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = D7303D021F83206F0052717E /* delete.png */; };
+		D735407F1FA6DE8300245961 /* guest.png in Resources */ = {isa = PBXBuildFile; fileRef = D735407E1FA6DE8300245961 /* guest.png */; };
 		D749B6891F944AAA00BBCA7A /* FirebaseWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D749B6881F944AAA00BBCA7A /* FirebaseWorks.swift */; };
 		D749B68B1F944B2200BBCA7A /* AlertSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D749B68A1F944B2200BBCA7A /* AlertSetting.swift */; };
 		D74A6BF91F8617F900335E7E /* PaperViewController + IMGresize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */; };
@@ -75,6 +76,7 @@
 		D7303D001F82576F0052717E /* UINavigationController+Transparent+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		D7303D021F83206F0052717E /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		D7303D071F8323B70052717E /* colorplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorplate.png; sourceTree = "<group>"; };
+		D735407E1FA6DE8300245961 /* guest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guest.png; sourceTree = "<group>"; };
 		D749B6881F944AAA00BBCA7A /* FirebaseWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWorks.swift; sourceTree = "<group>"; };
 		D749B68A1F944B2200BBCA7A /* AlertSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSetting.swift; sourceTree = "<group>"; };
 		D74A6BF81F8617F900335E7E /* PaperViewController + IMGresize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaperViewController + IMGresize.swift"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				D79100EB1FA07D2400B16923 /* userDefaultImage .png */,
 				D70C9AC41FA05D1F00580A49 /* loginfacebook.png */,
+				D735407E1FA6DE8300245961 /* guest.png */,
 				D787149C1FA1C485003D76E8 /* setting.png */,
 				D78714A21FA1DB34003D76E8 /* logo.png */,
 				D70C9AC21FA058CF00580A49 /* googleSign.png */,
@@ -318,6 +321,7 @@
 				D787149B1FA1C379003D76E8 /* Group.png in Resources */,
 				D787149D1FA1C485003D76E8 /* setting.png in Resources */,
 				D70C9ABD1FA04F3700580A49 /* GoogleService-Info.plist in Resources */,
+				D735407F1FA6DE8300245961 /* guest.png in Resources */,
 				D79100EC1FA07D2400B16923 /* userDefaultImage .png in Resources */,
 				D7303D031F8320720052717E /* delete.png in Resources */,
 				D7D267C71F83311000829B43 /* colorplate.png in Resources */,
@@ -471,6 +475,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -528,6 +533,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -540,6 +546,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -555,13 +562,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM7PE2ATP2;
 				INFOPLIST_FILE = noteForU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willy.noteForU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "noteForU/noteForU-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -574,12 +582,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM7PE2ATP2;
 				INFOPLIST_FILE = noteForU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willy.noteForU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "noteForU/noteForU-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -47,9 +47,20 @@ class SettingTableViewController: UITableViewController ,MFMailComposeViewContro
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        //當訪客登入時鎖住上傳下載
+        if guestLoginBool == true && indexPath.section == 0 {
+            cell.isHidden = true
+        }
         
         cell.textLabel?.text = items[indexPath.section][indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if guestLoginBool == true && indexPath.section == 0 {
+            return 0
+        }
+        return 50
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,6 +86,7 @@ class SettingTableViewController: UITableViewController ,MFMailComposeViewContro
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(["willy12262001@gmail.com"])
+            mail.setSubject("意見回饋")
             mail.setMessageBody("<p></p>", isHTML: true)
             
             present(mail, animated: true)

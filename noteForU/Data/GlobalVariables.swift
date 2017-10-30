@@ -37,4 +37,6 @@ var currentDate:String? = nil
 var responseDict:NSDictionary? = nil
 //alert專用
 var alertController:UIAlertController? = nil
+//登入專用
+var guestLoginBool:Bool? = nil
 

@@ -42,13 +42,18 @@ class AlertSetting: UIViewController {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
+        let cancell = UIAlertAction(title: "cancel", style: .default, handler: nil)
         let okAction = UIAlertAction(title: BTNtitle, style: .default) { _ in
        
-            guard let vc = target.storyboard?.instantiateViewController(withIdentifier: "LogInViewController") else {
+            guard let vc = target.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") else {
                 return
             }
+            guestLoginBool = true
+            uuid = "geustID"
+            usersDataManager.createOrLogin()
             target.present(vc, animated: true, completion: nil)
         }
+        alertController.addAction(cancell)
         alertController.addAction(okAction)
         
         target.present(alertController, animated: true, completion: nil)

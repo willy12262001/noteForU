@@ -49,12 +49,13 @@ class ContainerViewController: UIViewController {
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                
                 self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
                 
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
+        } else if guestLoginBool == true {
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }
         
     }
